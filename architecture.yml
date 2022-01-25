@@ -10,7 +10,11 @@ elements:
   0-References/3-ISO13485QualityManagementForMedicalDevices.yaml: &ref_2
     title: ISO 18485 - Quality Management for Medical Devices
     url: https://www.iso.org/iso-13485-medical-devices.html
-  1-StakeholderNeeds/1-QualitySystemProcessesForMedicalDeviceManufacturers.yaml: &ref_3
+  0-References/4-21CFRPart820dot30BDesignAndDevelopmentPlanning.yaml: &ref_3
+    title: 21 CFR Part 820.30 (B) - Design and Development Planning
+    url: >-
+      https://www.ecfr.gov/current/title-21/chapter-I/subchapter-H/part-820#p-820.30(b)
+  1-StakeholderNeeds/1-QualitySystemProcessesForMedicalDeviceManufacturers.yaml: &ref_4
     id: 1
     name: Quality System Processes for Medical Device Manufacturers
     statement: >-
@@ -19,6 +23,47 @@ elements:
     derivedFrom:
       - 0-References/2-21CFRPart820FDAQMSForMedicalDevices.yaml
       - 0-References/3-ISO13485QualityManagementForMedicalDevices.yaml
+  1-StakeholderNeeds/2-DesignAndDevelopmentPlanning.yaml: &ref_5
+    id: 2
+    name: Design & Development Planning
+    statement: >-
+      Each manufacturer shall establish and maintain plans that describe or
+      reference the design and development activities and define responsibility
+      for implementation. The plans shall identify and describe the interfaces
+      with different groups or activities that provide, or result in, input to
+      the design and development process. The plans shall be reviewed, updated,
+      and approved as design and development evolves.
+    derivedFrom:
+      - 0-References/4-21CFRPart820dot30BDesignAndDevelopmentPlanning.yaml
+  3-DataStructures/1-DesignDevelopmentPlan.yaml: &ref_6
+    name: Design & Development Plan
+    purpose: Data structure for a Design & Development Plan (DDP) document
+    template: |
+      project_scope: {{project_scope}}
+      cost: {{cost}}
+      schedule: {{schedule}}
+    elements:
+      - key: project_scope
+        type: dict
+        itemType: string
+        description: A way to set boundaries, goals, deadlines, assumptions, & constraints.
+        derivedFrom: []
+      - key: cost
+        type: string
+        itemType: ''
+        description: >-
+          An amount of money needed to pay or compensate to buy or take a
+          service or good.
+        derivedFrom: null
+      - key: schedule
+        type: string
+        itemType: ''
+        description: >-
+          Establishes the criteria & activities for developing and monitoring a
+          schedule.
+        derivedFrom: []
+    derivedFrom:
+      - 1-StakeholderNeeds/2-DesignAndDevelopmentPlanning.yaml
 package:
   name: docs-as-code-for-medical-oshw
   version: 1.0.0
@@ -43,5 +88,9 @@ generationDate: 1/25/2022
   - *ref_0
   - *ref_1
   - *ref_2
-1-StakeholderNeeds:
   - *ref_3
+1-StakeholderNeeds:
+  - *ref_4
+  - *ref_5
+3-DataStructures:
+  - *ref_6
