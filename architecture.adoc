@@ -19,7 +19,7 @@ The *Docs-as-Code for Open-Source Medical Hardware & PPE's* architecture is guid
 
 === 1: Quality System Processes for Medical Device Manufacturers
 ****
-Manufacturers of medical devices shall ensure that finished devices will be safe and effective.footnote:2-21CFRPart820FDAQMSForMedicalDevices[21 CFR Part 820 — Quality System Regulation https://www.ecfr.gov/current/title-21/chapter-I/subchapter-H/part-820]footnote:3-ISO13485QualityManagementForMedicalDevices[ISO 18485 - Quality Management for Medical Devices https://www.iso.org/iso-13485-medical-devices.html]
+Manufacturers of medical devices shall ensure that finished devices will be safe and effective.footnote:2-21CFRPart820FDAQMSForMedicalDevices[21 CFR Part 820 — Quality System Regulation https://www.ecfr.gov/current/title-21/chapter-I/subchapter-H/part-820]footnote:3-ISO13485QualityManagementForMedicalDevices[ISO 13485 - Quality Management for Medical Devices https://www.iso.org/iso-13485-medical-devices.html]
 ****
 
 
@@ -40,8 +40,8 @@ This section covers each data structure type in the *Docs-as-Code for Open-Sourc
 .Design & Development Plan Template
 ----
 project_scope: {{project_scope}}
-cost: {{cost}}
-schedule: {{schedule}}
+project_cost: {{project_cost}}
+project_schedule: {{project_schedule}}
 
 ----
 
@@ -61,7 +61,7 @@ schedule: {{schedule}}
 
 
 
-|cost
+|project_cost
 |string
 
 |
@@ -72,7 +72,7 @@ schedule: {{schedule}}
 
 
 
-|schedule
+|project_schedule
 |string
 
 |

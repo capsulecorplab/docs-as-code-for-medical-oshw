@@ -8,7 +8,7 @@ elements:
     title: 21 CFR Part 820 — Quality System Regulation
     url: https://www.ecfr.gov/current/title-21/chapter-I/subchapter-H/part-820
   0-References/3-ISO13485QualityManagementForMedicalDevices.yaml: &ref_2
-    title: ISO 18485 - Quality Management for Medical Devices
+    title: ISO 13485 - Quality Management for Medical Devices
     url: https://www.iso.org/iso-13485-medical-devices.html
   0-References/4-21CFRPart820dot30BDesignAndDevelopmentPlanning.yaml: &ref_3
     title: 21 CFR Part 820.30 (B) - Design and Development Planning
@@ -40,22 +40,22 @@ elements:
     purpose: Data structure for a Design & Development Plan (DDP) document
     template: |
       project_scope: {{project_scope}}
-      cost: {{cost}}
-      schedule: {{schedule}}
+      project_cost: {{project_cost}}
+      project_schedule: {{project_schedule}}
     elements:
       - key: project_scope
         type: dict
         itemType: string
         description: A way to set boundaries, goals, deadlines, assumptions, & constraints.
         derivedFrom: []
-      - key: cost
+      - key: project_cost
         type: string
         itemType: ''
         description: >-
           An amount of money needed to pay or compensate to buy or take a
           service or good.
         derivedFrom: null
-      - key: schedule
+      - key: project_schedule
         type: string
         itemType: ''
         description: >-
