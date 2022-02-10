@@ -42,6 +42,10 @@ This section covers each data structure type in the *Docs-as-Code for Open-Sourc
 project_scope: {{project_scope}}
 project_cost: {{project_cost}}
 project_schedule: {{project_schedule}}
+out_of_scope: {{out_of_scope}}
+definitions: {{definitions}}
+reference_documents: {{reference_documents}}
+organization_and_communication: {{organization_and_communication}}
 
 ----
 
@@ -51,7 +55,7 @@ project_schedule: {{project_schedule}}
 
 
 |project_scope
-|dict
+|dictionary
 
 |string
 
@@ -78,6 +82,50 @@ project_schedule: {{project_schedule}}
 |
 
 |Establishes the criteria & activities for developing and monitoring a schedule.
+
+|
+
+
+
+|out_of_scope
+|string
+
+|
+
+|Work over and beyond current scope of this project
+
+|
+
+
+
+|definitions
+|dictionary
+
+|
+
+|Listing of acronyms and their compound term/phrase.  key = acronym.  value = term/phrase. (e.g., 'TBD'. 'To Be Determined')
+
+|
+
+
+
+|reference_documents
+|list
+
+|string
+
+|Listing of references
+
+|
+
+
+
+|organization_and_communication
+|list
+
+|list
+
+|Defines a functional group that make up the project, their responsibilities, and how they communicate.
 
 |
 

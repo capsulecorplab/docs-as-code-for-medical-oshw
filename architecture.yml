@@ -42,9 +42,13 @@ elements:
       project_scope: {{project_scope}}
       project_cost: {{project_cost}}
       project_schedule: {{project_schedule}}
+      out_of_scope: {{out_of_scope}}
+      definitions: {{definitions}}
+      reference_documents: {{reference_documents}}
+      organization_and_communication: {{organization_and_communication}}
     elements:
       - key: project_scope
-        type: dict
+        type: dictionary
         itemType: string
         description: A way to set boundaries, goals, deadlines, assumptions, & constraints.
         derivedFrom: []
@@ -61,6 +65,30 @@ elements:
         description: >-
           Establishes the criteria & activities for developing and monitoring a
           schedule.
+        derivedFrom: []
+      - key: out_of_scope
+        type: string
+        itemType: ''
+        description: Work over and beyond current scope of this project
+        derivedFrom: []
+      - key: definitions
+        type: dictionary
+        itemType: ''
+        description: >-
+          Listing of acronyms and their compound term/phrase.  key = acronym. 
+          value = term/phrase. (e.g., 'TBD'. 'To Be Determined')
+        derivedFrom: []
+      - key: reference_documents
+        type: list
+        itemType: string
+        description: Listing of references
+        derivedFrom: []
+      - key: organization_and_communication
+        type: list
+        itemType: list
+        description: >-
+          Defines a functional group that make up the project, their
+          responsibilities, and how they communicate.
         derivedFrom: []
     derivedFrom:
       - 1-StakeholderNeeds/2-DesignAndDevelopmentPlanning.yaml
@@ -83,7 +111,7 @@ package:
     url: >-
       https://github.com/tetrabiodistributed/docs-as-code-for-medical-oshw/issues
   homepage: https://tetrabiodistributed.github.io/docs-as-code-for-medical-oshw
-generationDate: 1/25/2022
+generationDate: 2/10/2022
 0-References:
   - *ref_0
   - *ref_1

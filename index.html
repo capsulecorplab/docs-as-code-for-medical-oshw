@@ -515,7 +515,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="content">
 <pre>project_scope: {{project_scope}}
 project_cost: {{project_cost}}
-project_schedule: {{project_schedule}}</pre>
+project_schedule: {{project_schedule}}
+out_of_scope: {{out_of_scope}}
+definitions: {{definitions}}
+reference_documents: {{reference_documents}}
+organization_and_communication: {{organization_and_communication}}</pre>
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -539,7 +543,7 @@ project_schedule: {{project_schedule}}</pre>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">project_scope</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dict</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dictionary</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A way to set boundaries, goals, deadlines, assumptions, &amp; constraints.</p></td>
 <td class="tableblock halign-left valign-top"></td>
@@ -556,6 +560,34 @@ project_schedule: {{project_schedule}}</pre>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Establishes the criteria &amp; activities for developing and monitoring a schedule.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">out_of_scope</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Work over and beyond current scope of this project</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">definitions</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dictionary</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Listing of acronyms and their compound term/phrase.  key = acronym.  value = term/phrase. (e.g., 'TBD'. 'To Be Determined')</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">reference_documents</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">list</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Listing of references</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">organization_and_communication</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">list</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">list</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines a functional group that make up the project, their responsibilities, and how they communicate.</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 </tbody>
@@ -589,7 +621,7 @@ project_schedule: {{project_schedule}}</pre>
 <div id="footer">
 <div id="footer-text">
 Version v1.0.0<br>
-Last updated 2022-01-25 18:41:53 UTC
+Last updated 2022-02-10 17:43:55 UTC
 </div>
 </div>
 </body>
