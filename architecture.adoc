@@ -1,6 +1,6 @@
 = Docs-as-Code for Open-Source Medical Hardware & PPE's
 :doc-name: architecture.adoc
-:revnumber: v1.0.0
+:revnumber: v0.1.0
 :toc: left
 
 ifndef::backend-pdf[]
@@ -23,125 +23,8 @@ Manufacturers of medical devices shall ensure that finished devices will be safe
 ****
 
 
-=== 2: Design & Development Planning
-****
-Each manufacturer shall establish and maintain plans that describe or reference the design and development activities and define responsibility for implementation. The plans shall identify and describe the interfaces with different groups or activities that provide, or result in, input to the design and development process. The plans shall be reviewed, updated, and approved as design and development evolves.footnote:4-21CFRPart820dot30BDesignAndDevelopmentPlanning[21 CFR Part 820.30 (B) - Design and Development Planning https://www.ecfr.gov/current/title-21/chapter-I/subchapter-H/part-820#p-820.30(b)]
-****
-
-
 
 == Data Structures
 This section covers each data structure type in the *Docs-as-Code for Open-Source Medical Hardware & PPE's* architecture.
-
-
-=== Design & Development Plan
-*Purpose:* Data structure for a Design & Development Plan (DDP) document
-
-.Design & Development Plan Template
-----
-project_scope: {{project_scope}}
-project_cost: {{project_cost}}
-project_schedule: {{project_schedule}}
-out_of_scope: {{out_of_scope}}
-definitions: {{definitions}}
-reference_documents: {{reference_documents}}
-organization_and_communication: {{organization_and_communication}}
-
-----
-
-.Design & Development Plan Specification
-|===
-|Field |Type |Item Type |Description |Source
-
-
-|project_scope
-|dictionary
-
-|string
-
-|A way to set boundaries, goals, deadlines, assumptions, & constraints.
-
-|
-
-
-
-|project_cost
-|string
-
-|
-
-|An amount of money needed to pay or compensate to buy or take a service or good.
-
-|
-
-
-
-|project_schedule
-|string
-
-|
-
-|Establishes the criteria & activities for developing and monitoring a schedule.
-
-|
-
-
-
-|out_of_scope
-|string
-
-|
-
-|Work over and beyond current scope of this project
-
-|
-
-
-
-|definitions
-|dictionary
-
-|
-
-|Listing of acronyms and their compound term/phrase.  key = acronym.  value = term/phrase. (e.g., 'TBD'. 'To Be Determined')
-
-|
-
-
-
-|reference_documents
-|list
-
-|string
-
-|Listing of references
-
-|
-
-
-
-|organization_and_communication
-|list
-
-|list
-
-|Defines a functional group that make up the project, their responsibilities, and how they communicate.
-
-|
-
-
-
-|===
-
-
-==== *Derived From:*
-
-
-
-
-* xref:index.html#_2_design_development_planning[Design & Development Planning]
-
-
-
 
 

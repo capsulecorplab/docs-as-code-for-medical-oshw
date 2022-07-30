@@ -440,7 +440,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="header">
 <h1>Docs-as-Code for Open-Source Medical Hardware &amp; PPE&#8217;s</h1>
 <div class="details">
-<span id="revnumber">version v1.0.0</span>
+<span id="revnumber">version v0.1.0</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
@@ -448,14 +448,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_stakeholder_needs">Stakeholder Needs</a>
 <ul class="sectlevel2">
 <li><a href="#_1_quality_system_processes_for_medical_device_manufacturers">1: Quality System Processes for Medical Device Manufacturers</a></li>
-<li><a href="#_2_design_development_planning">2: Design &amp; Development Planning</a></li>
 </ul>
 </li>
-<li><a href="#_data_structures">Data Structures</a>
-<ul class="sectlevel2">
-<li><a href="#_design_development_plan">Design &amp; Development Plan</a></li>
-</ul>
-</li>
+<li><a href="#_data_structures">Data Structures</a></li>
 </ul>
 </div>
 </div>
@@ -487,16 +482,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_2_design_development_planning">2: Design &amp; Development Planning</h3>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p>Each manufacturer shall establish and maintain plans that describe or reference the design and development activities and define responsibility for implementation. The plans shall identify and describe the interfaces with different groups or activities that provide, or result in, input to the design and development process. The plans shall be reviewed, updated, and approved as design and development evolves.<sup class="footnote" id="_footnote_4-21CFRPart820dot30BDesignAndDevelopmentPlanning">[<a id="_footnoteref_3" class="footnote" href="#_footnotedef_3" title="View footnote.">3</a>]</sup></p>
-</div>
-</div>
-</div>
-</div>
 </div>
 </div>
 <div class="sect1">
@@ -504,104 +489,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sectionbody">
 <div class="paragraph">
 <p>This section covers each data structure type in the <strong>Docs-as-Code for Open-Source Medical Hardware &amp; PPE&#8217;s</strong> architecture.</p>
-</div>
-<div class="sect2">
-<h3 id="_design_development_plan">Design &amp; Development Plan</h3>
-<div class="paragraph">
-<p><strong>Purpose:</strong> Data structure for a Design &amp; Development Plan (DDP) document</p>
-</div>
-<div class="listingblock">
-<div class="title">Design &amp; Development Plan Template</div>
-<div class="content">
-<pre>project_scope: {{project_scope}}
-project_cost: {{project_cost}}
-project_schedule: {{project_schedule}}
-out_of_scope: {{out_of_scope}}
-definitions: {{definitions}}
-reference_documents: {{reference_documents}}
-organization_and_communication: {{organization_and_communication}}</pre>
-</div>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 1. Design &amp; Development Plan Specification</caption>
-<colgroup>
-<col style="width: 20%;">
-<col style="width: 20%;">
-<col style="width: 20%;">
-<col style="width: 20%;">
-<col style="width: 20%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Field</th>
-<th class="tableblock halign-left valign-top">Type</th>
-<th class="tableblock halign-left valign-top">Item Type</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Source</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">project_scope</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dictionary</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A way to set boundaries, goals, deadlines, assumptions, &amp; constraints.</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">project_cost</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">An amount of money needed to pay or compensate to buy or take a service or good.</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">project_schedule</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Establishes the criteria &amp; activities for developing and monitoring a schedule.</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">out_of_scope</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Work over and beyond current scope of this project</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">definitions</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dictionary</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Listing of acronyms and their compound term/phrase.  key = acronym.  value = term/phrase. (e.g., 'TBD'. 'To Be Determined')</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">reference_documents</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">list</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Listing of references</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">organization_and_communication</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">list</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">list</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Defines a functional group that make up the project, their responsibilities, and how they communicate.</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-<div class="sect3">
-<h4 id="_derived_from"><strong>Derived From:</strong></h4>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="index.html#_2_design_development_planning">Design &amp; Development Planning</a></p>
-</li>
-</ul>
-</div>
-</div>
 </div>
 </div>
 </div>
@@ -614,14 +501,11 @@ organization_and_communication: {{organization_and_communication}}</pre>
 <div class="footnote" id="_footnotedef_2">
 <a href="#_footnoteref_2">2</a>. ISO 13485 - Quality Management for Medical Devices <a href="https://www.iso.org/iso-13485-medical-devices.html" class="bare">https://www.iso.org/iso-13485-medical-devices.html</a>
 </div>
-<div class="footnote" id="_footnotedef_3">
-<a href="#_footnoteref_3">3</a>. 21 CFR Part 820.30 (B) - Design and Development Planning <a href="https://www.ecfr.gov/current/title-21/chapter-I/subchapter-H/part-820#p-820.30(b" class="bare">https://www.ecfr.gov/current/title-21/chapter-I/subchapter-H/part-820#p-820.30(b</a>)
-</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Version v1.0.0<br>
-Last updated 2022-02-10 17:43:55 UTC
+Version v0.1.0<br>
+Last updated 2022-07-30 18:31:10 UTC
 </div>
 </div>
 </body>

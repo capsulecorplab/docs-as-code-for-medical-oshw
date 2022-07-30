@@ -10,11 +10,7 @@ elements:
   0-References/3-ISO13485QualityManagementForMedicalDevices.yaml: &ref_2
     title: ISO 13485 - Quality Management for Medical Devices
     url: https://www.iso.org/iso-13485-medical-devices.html
-  0-References/4-21CFRPart820dot30BDesignAndDevelopmentPlanning.yaml: &ref_3
-    title: 21 CFR Part 820.30 (B) - Design and Development Planning
-    url: >-
-      https://www.ecfr.gov/current/title-21/chapter-I/subchapter-H/part-820#p-820.30(b)
-  1-StakeholderNeeds/1-QualitySystemProcessesForMedicalDeviceManufacturers.yaml: &ref_4
+  1-StakeholderNeeds/1-QualitySystemProcessesForMedicalDeviceManufacturers.yaml: &ref_3
     id: 1
     name: Quality System Processes for Medical Device Manufacturers
     statement: >-
@@ -23,78 +19,9 @@ elements:
     derivedFrom:
       - 0-References/2-21CFRPart820FDAQMSForMedicalDevices.yaml
       - 0-References/3-ISO13485QualityManagementForMedicalDevices.yaml
-  1-StakeholderNeeds/2-DesignAndDevelopmentPlanning.yaml: &ref_5
-    id: 2
-    name: Design & Development Planning
-    statement: >-
-      Each manufacturer shall establish and maintain plans that describe or
-      reference the design and development activities and define responsibility
-      for implementation. The plans shall identify and describe the interfaces
-      with different groups or activities that provide, or result in, input to
-      the design and development process. The plans shall be reviewed, updated,
-      and approved as design and development evolves.
-    derivedFrom:
-      - 0-References/4-21CFRPart820dot30BDesignAndDevelopmentPlanning.yaml
-  3-DataStructures/1-DesignDevelopmentPlan.yaml: &ref_6
-    name: Design & Development Plan
-    purpose: Data structure for a Design & Development Plan (DDP) document
-    template: |
-      project_scope: {{project_scope}}
-      project_cost: {{project_cost}}
-      project_schedule: {{project_schedule}}
-      out_of_scope: {{out_of_scope}}
-      definitions: {{definitions}}
-      reference_documents: {{reference_documents}}
-      organization_and_communication: {{organization_and_communication}}
-    elements:
-      - key: project_scope
-        type: dictionary
-        itemType: string
-        description: A way to set boundaries, goals, deadlines, assumptions, & constraints.
-        derivedFrom: []
-      - key: project_cost
-        type: string
-        itemType: ''
-        description: >-
-          An amount of money needed to pay or compensate to buy or take a
-          service or good.
-        derivedFrom: null
-      - key: project_schedule
-        type: string
-        itemType: ''
-        description: >-
-          Establishes the criteria & activities for developing and monitoring a
-          schedule.
-        derivedFrom: []
-      - key: out_of_scope
-        type: string
-        itemType: ''
-        description: Work over and beyond current scope of this project
-        derivedFrom: []
-      - key: definitions
-        type: dictionary
-        itemType: ''
-        description: >-
-          Listing of acronyms and their compound term/phrase.  key = acronym. 
-          value = term/phrase. (e.g., 'TBD'. 'To Be Determined')
-        derivedFrom: []
-      - key: reference_documents
-        type: list
-        itemType: string
-        description: Listing of references
-        derivedFrom: []
-      - key: organization_and_communication
-        type: list
-        itemType: list
-        description: >-
-          Defines a functional group that make up the project, their
-          responsibilities, and how they communicate.
-        derivedFrom: []
-    derivedFrom:
-      - 1-StakeholderNeeds/2-DesignAndDevelopmentPlanning.yaml
 package:
   name: docs-as-code-for-medical-oshw
-  version: 1.0.0
+  version: 0.1.0
   description: Docs-as-Code for Open-Source Medical Hardware & PPE's
   main: index.js
   scripts:
@@ -111,14 +38,10 @@ package:
     url: >-
       https://github.com/tetrabiodistributed/docs-as-code-for-medical-oshw/issues
   homepage: https://tetrabiodistributed.github.io/docs-as-code-for-medical-oshw
-generationDate: 2/10/2022
+generationDate: 7/30/2022
 0-References:
   - *ref_0
   - *ref_1
   - *ref_2
-  - *ref_3
 1-StakeholderNeeds:
-  - *ref_4
-  - *ref_5
-3-DataStructures:
-  - *ref_6
+  - *ref_3
